@@ -1,9 +1,37 @@
-# React + Vite
+# React Image Gallery
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive image gallery built with React JS, featuring:
 
-Currently, two official plugins are available:
+- Reordering images
+- Deleting multiple images
+- upload image
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-# -React-image-gallery
+## Features
+
+- Grid layout with one feature image larger than the others.
+- Drag-and-drop reordering.
+- Multi-image selection for deletion.
+
+## Live Demo
+
+View the live gallery [here](https://wondrous-creponne-1c7c55.netlify.app/).
+
+## How to Run
+
+1. Clone this repository.
+2. Run `npm install` to install dependencies.
+3. Run `npm run dev ` to start the development server.
+
+## Project Structure
+
+- `/src` directory contains React components and logic.
+- `/public` directory holds static assets.
+
+## Technologies Used
+
+- React JS
+- HTML, CSS
+
+## Contact
+
+For feedback , please contact [email:ekramhossain117@gmail.com].

@@ -36,38 +36,38 @@ const initialState = {
   markedImageIds: []
 }
 
-// export const imageGallerySlice = createSlice({
-//   name: 'imageGallery',
-//   initialState,
-//   reducers: {
-//     addImage: (state, action) => {
-//       state.imageGalleryData.push(action.payload);
-//     },
-//     removeImage: (state) => {
+export const imageGallerySlice = createSlice({
+  name: 'imageGallery',
+  initialState,
+  reducers: {
+    addImage: (state, action) => {
+      state.imageGalleryData.push(action.payload);
+    },
+    removeImage: (state) => {
 
-//       state.imageGalleryData = state.imageGalleryData.filter(image => !state.markedImageIds.includes(image.id));
-//       state.markedImageIds = [];
-//     },
-//     markImage: (state, action) => {
-//       const imageId = action.payload;
-//       if (state.markedImageIds.includes(imageId)) {
-//         state.markedImageIds = state.markedImageIds.filter(id => id !== imageId);
-//       } else {
-//         state.markedImageIds.push(imageId);
-//       }
-//       console.log(imageId)
-//     },
-//     setGallery: (state,action) => {
-//       state.imageGalleryData =action.payload;
-//     },
-//   },
-// });
+      state.imageGalleryData = state.imageGalleryData.filter(image => !state.markedImageIds.includes(image.id));
+      state.markedImageIds = [];
+    },
+    markImage: (state, action) => {
+      const imageId = action.payload;
+      if (state.markedImageIds.includes(imageId)) {
+        state.markedImageIds = state.markedImageIds.filter(id => id !== imageId);
+      } else {
+        state.markedImageIds.push(imageId);
+      }
+      console.log(imageId)
+    },
+    setGallery: (state,action) => {
+      state.imageGalleryData =action.payload;
+    },
+  },
+});
 
-// export const { addImage, removeImage, markImage,setGallery } = imageGallerySlice.actions;
+export const { addImage, removeImage, markImage,setGallery } = imageGallerySlice.actions;
 
 
 
-// export default imageGallerySlice.reducer;
+export default imageGallerySlice.reducer;
 
 
 

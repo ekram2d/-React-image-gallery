@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-import React from 'react';
+// all image are store there ,redux intital state 
 const initialState = {
   imageGalleryData: [{ imageurl: 'https://previews.dropbox.com/p/thumb/ACHplI6boHOQsu_2Kj0JVws9Mw7giS7FNEp_8ftUn2QHUqh40XbWkwP67dPOkUy0ZJV7NUFOX0rEx41oHaIcWUSYEZBnYyELGjWz39s7pkKshgWBJy3ep9q1wv1jXbXN1AY1sd4GrDXTExlClkJ1h5V0XpBFkW7CsNLY_Fmd6ul5cTCteQPRCamvOLpj9t_7TEkzcNoT_4tN3cUoSpVB7NpgkF-gKUx95dsKarjB-AQSDdY9rQSrZfaAmH3sgHDzXB7DS9e7Z5PE7WA-h_SO8ar0Pe16TIWz8lZe2P1G1Ub85bBulpB3FEnUUszIQFmNjnWO-FtydKghan-6HFEJr98a/p.png', id: 1 },
   { imageurl: 'https://previews.dropbox.com/p/thumb/ACGC8FtIuSHlMSZu-gOuAVPP43UxqHbq7XxqG4hzklputXXHi1LV-5R3whBkAjf6DEfC7yp3RKXs84AQNiFZFvZ7TlAVsXeAysPh6m7HWfwNYKX2FM07KVdPV7CcjAPT1DDV9m1HMgp20-j_gTkojr_SqfhhWRg_9SrTHwXAUJQWbio5vWwNjhTGZ80TgduMY5MliqpvLyUa0oyBRgau4CZezuytOvN1ximJTHG3yHEpRIUy9aYHDO_grT1RdRu6QymF44FFF43klh1MV0Q-R3cgn0VrcWSv2f9_oaYKWgc4KohTmeQT7w3VKssn6fgLnOfGS__4MiJUrsLdyecIJkiJ/p.png', id: 2 }

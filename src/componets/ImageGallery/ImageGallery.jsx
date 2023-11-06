@@ -5,7 +5,7 @@ import { useDispatch } from 'react-redux';
 import { setGallery, markImage } from '../../redux/features/imageSlice/imageGallerySlice';
 
 export default function ImageGallery() {
-
+//  get the image array data from redux intital state
   const imagesdata = useSelector((state) => state.imageGallery.imageGalleryData);
 
 
@@ -17,29 +17,34 @@ export default function ImageGallery() {
 
 
 
-
+//  for store  mark image 
   const handleMarkClick = (imageId) => {
 
     dispatch(markImage(imageId));
   };
-
+ 
+  //  for drag and dropping function 
   function handleSort() {
 
     const peopleClone = [...imagesdata];
     const temp = peopleClone[dragImage.current];
     peopleClone[dragImage.current] = peopleClone[draggedOverImage.current];
     peopleClone[draggedOverImage.current] = temp;
+
+    // after drag and dropping new image gallery set 
     dispatch(setGallery(peopleClone));
   }
 
 
   return (
-    <main className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 grid-rows-4 gap-4">
+    <main className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 grid-rows-4 gap-4"  >
+
+      {/* show the image gallery using grid system  */}
       {imagesdata.map((image, index) => (
         <div
           key={image.id}
           className={`relative ${index === 0 ? "sm:col-span-2 sm:row-span-2" : ""
-            } border rounded p-2 bg-gray-100`}
+            } border rounded p-2  card hover:transform hover:scale-105 flex justify-center items-center` }
           draggable="true"
           onDragStart={() => (dragImage.current = index)}
           onDragEnter={() => (draggedOverImage.current = index)}
@@ -47,12 +52,12 @@ export default function ImageGallery() {
           onDragOver={(e) => e.preventDefault()}
         >
           <img
-            className={`rounded-lg w-full ${index === 0 ? "w-full mx-auto" : "w-full mx-auto"
+            className={`rounded-lg w-full ${index === 0 ? "w-full mx-auto" : "w-[200px] h-[200px] mx-auto"
               }`}
             src={image.imageurl}
             alt="product image"
           />
-          <div className="absolute top-10 left-10">
+          <div className="absolute top-12 left-12">
             <div className="flex items-center mr-4">
               <input
                 checked={image.selected}
